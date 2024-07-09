@@ -90,23 +90,23 @@ class ATM {
             return;
         }
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         boolean exit = false;
 
         while (!exit) {
             displayMenu();
             System.out.print("Choose an option: ");
-            int choice = scanner.nextInt();
+            int choice = sc.nextInt();
 
             switch (choice) {
                 case 1:
                     System.out.print("Enter amount to withdraw: $");
-                    double withdrawAmount = scanner.nextDouble();
+                    double withdrawAmount = sc.nextDouble();
                     withdraw(withdrawAmount);
                     break;
                 case 2:
                     System.out.print("Enter amount to deposit: $");
-                    double depositAmount = scanner.nextDouble();
+                    double depositAmount = sc.nextDouble();
                     deposit(depositAmount);
                     break;
                 case 3:
@@ -121,7 +121,7 @@ class ATM {
             }
         }
 
-        scanner.close();
+        sc.close();
     }
 }
 
